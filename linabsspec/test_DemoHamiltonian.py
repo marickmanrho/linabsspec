@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from DemoHamiltonian import *
+from demohamiltonian import *
 
 class TestHamGen(unittest.TestCase):
     # Test if output has right dimensions
