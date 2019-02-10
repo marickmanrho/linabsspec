@@ -1,3 +1,10 @@
+#
+# absorption.py
+#
+# Calculates linear Absorption Spectrum
+# See README for more info
+#
+
 def Absorption(E,Mu,Type = "gaus",gamma = 0.000001,nSp = 1000,Write=False,Show=False):
     import numpy as np
     from checkinput import CheckInput
@@ -34,8 +41,8 @@ def Absorption(E,Mu,Type = "gaus",gamma = 0.000001,nSp = 1000,Write=False,Show=F
     if Show:
         PlotAbsorption(w,Abs)
 
-import numpy as np
-from DemoHamiltonian import Hamiltonian
+#import numpy as np
+#from DemoHamiltonian import Hamiltonian
 
-E, Mu = Hamiltonian()
-Absorption(E,Mu,gamma=0.001,Write=False,Show=True)
+#E, Mu = Hamiltonian()
+#Absorption(E,Mu,gamma=0.001,Write=False,Show=True)

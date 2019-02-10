@@ -16,8 +16,8 @@ def CheckInput(E,Mu,Type,gamma,nSp,Write,Show):
 
     # Make sure E and Mu are real valued numpy arrays
     if (type(E) != np.ndarray or type(Mu) != np.ndarray):
-        msg = "Input E or Mu is not a numpy array type."
-        exit(msg)
+        msg = "Input E or Mu is not a numpy array type. Converting..."
+        warnings.warn(msg,UserWarning)
 
     if (type(E) != np.ndarray):
         E = np.asarray(E)
@@ -27,11 +27,11 @@ def CheckInput(E,Mu,Type,gamma,nSp,Write,Show):
     Ecomplex = np.iscomplex(E)
     if Ecomplex.any():
         msg = "E contains complex numbers."
-        exit(msg)
+        raise ValueError(msg)
     Mucomplex = np.iscomplex(Mu)
     if Mucomplex.any():
         msg = "Mu contains complex numbers."
-        exit(msg)
+        raise ValueError(msg)
 
     # Determine shape of E and Mu, needed for below checks
     sE = np.shape(E)
