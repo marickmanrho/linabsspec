@@ -14,6 +14,7 @@ Run `pip install .` to install linabsspec and dependencies.
 The Linear Absorption Spectrum is calculated by calling `Absorption()`.
 
 `Absorption(E,Mu,Type = "gaus",gamma = 0.000001,nSp = 1000,Write=False,Show=False,Filename = "Demo")`
+
 | Variable  |Description                          |Type|
 | ---------:|:------------------------------------| -----:|
 |`E`        |EigenEnergies of Hamiltonian         |Vector |
