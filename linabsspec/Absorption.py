@@ -41,8 +41,14 @@ def Absorption(E,Mu,Type = "gaus",gamma = 0.000001,nSp = 1000,Write=False,Show=F
     if Show:
         PlotAbsorption(w,Abs)
 
-#import numpy as np
-#from DemoHamiltonian import Hamiltonian
 
-#E, Mu = Hamiltonian()
-#Absorption(E,Mu,gamma=0.001,Write=False,Show=True)
+#
+# Uncomment below code for a demo of Absorption()
+#
+
+# import numpy as np
+# from demohamiltonian import Hamiltonian
+#
+# # Hamiltonian() generates a demo Hamiltonian and outputs is eigenvalues and eigenvectors.
+# E, Mu = Hamiltonian()
+# Absorption(E,Mu,gamma=0.001,Write=False,Show=True)
