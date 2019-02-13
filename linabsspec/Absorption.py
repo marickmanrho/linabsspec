@@ -5,10 +5,11 @@
 # See README for more info
 #
 
-def Absorption(E,Mu,Type = "gaus",gamma = 0.000001,nSp = 1000,Write=False,Show=False):
+def Absorption(E,Mu,Type = "gaus",gamma = 0.000001,nSp = 1000,Write=False,Show=False,Filename = "Demo"):
     import numpy as np
     from checkinput import CheckInput
     from plotabsorption import PlotAbsorption
+    from writeabsorption import WriteAbsorption
 
     # Check if input causes errors and overwrite to default if possible
     E,Mu,Type,gamma,nSp,Write,Show = CheckInput(E,Mu,Type,gamma,nSp,Write,Show)
@@ -41,14 +42,18 @@ def Absorption(E,Mu,Type = "gaus",gamma = 0.000001,nSp = 1000,Write=False,Show=F
     if Show:
         PlotAbsorption(w,Abs)
 
+    # Write to file
+    if True:
+        WriteAbsorption(w,Abs)
+
 
 #
 # Uncomment below code for a demo of Absorption()
 #
-
+# 
 # import numpy as np
 # from demohamiltonian import Hamiltonian
 #
 # # Hamiltonian() generates a demo Hamiltonian and outputs is eigenvalues and eigenvectors.
 # E, Mu = Hamiltonian()
-# Absorption(E,Mu,gamma=0.001,Write=False,Show=True)
+# Absorption(E,Mu,gamma=0.001,Write=True,Show=False)
