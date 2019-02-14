@@ -11,20 +11,20 @@ setup(name='linabsspec',
       classifiers=[
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.0',
-        'Development Status :: 1 - Planning',
+        'Development Status :: 3 - Alpha',
         'Environment :: Console',
         'Intended Audience :: Science/Research',
         'Natural Language :: English',
         'Topic :: Scientific/Engineering :: Chemistry',
         'Topic :: Scientific/Engineering :: Physics',
       ],
-      url='https://bitbucket.org/marickmanrho/linabsspec',
+      url='https://github.com/marickmanrho/linabsspec',
       author='Marick Manrho',
       author_email='m.manrho@rug.nl',
       license='MIT',
       packages=['linabsspec'],
       install_requires=[
-          'numpy','matplotlib','system',
+          'numpy','matplotlib','system','os'
       ],
       include_package_data=True,
       zip_safe=False)
